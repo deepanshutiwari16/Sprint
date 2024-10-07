@@ -1,0 +1,263 @@
+3 start prog_start:solution zero:0 one:1 two:2 three:3 four:4 five:5 seven:7 nine:9
+
+start:7 prog_start copy_start_addr
+
+2 copy_start_addr
+   one const_addr
+
+condition_1:7 copy_start_addr
+      jump_condition_addr
+
+jump_condition:4
+    jump_condition_addr:0
+    three jump_condition_true
+
+condition_2:7 copy_start_addr
+    stop_condition_addr
+
+stop_condition:4
+    stop_condition_addr:0
+    nine stop
+
+condition_3:7 copy_start_addr
+    add_condition_addr
+
+  7 copy_start_addr
+    sub_condition_addr
+
+add_sub_condition:4
+    add_condition_addr:0
+    one add_sub_condition_true
+   
+  4 sub_condition_addr:0
+    two add_sub_condition_true
+
+condition_4:7 copy_start_addr
+     less_condition_addr
+
+  7 copy_start_addr
+    equal_condition_addr
+ 
+less_equal_condition:4 less_condition_addr:0 five less_equal_condition_true
+
+  4 equal_condition_addr:0
+    four
+    less_equal_condition_true
+
+condition_5:7 copy_start_addr
+    copy_condition_addr
+
+copy_condition:4
+   copy_condition_addr:0 seven
+   copy_condition_true  
+
+condition_6:7 copy_start_addr
+    put_condition_addr
+
+put_condition:4
+   put_condition_addr:0 zero
+   put_condition_true
+ 
+less_equal_condition_true:1 less_condition_addr one less_equal_next_addr1
+
+ 7 less_equal_next_addr1:0 less_equal_next_value1
+
+1 less_equal_next_addr1 one less_equal_next_addr2
+
+ 7 less_equal_next_addr2:0 less_equal_next_value2
+
+1 less_equal_next_addr2 one less_equal_next_addr3
+
+ 7 less_equal_next_addr3:0 less_equal_next_value3
+
+1 less_equal_next_value1 const_addr less_equal_value1
+
+1 less_equal_next_value2 const_addr less_equal_value2
+
+1 less_equal_next_value3 const_addr less_equal_value3
+
+7 copy_start_addr less_equal_ori_addr 
+
+4 less_equal_ori_addr:0 four change_operation1
+
+3 less_equal_operation
+
+change_operation1:7 four less_equal_operation
+
+less_equal_operation:5
+    less_equal_value1:0
+    less_equal_value2:0
+    less_equal_operation_true
+
+7 five less_equal_operation
+
+1 copy_start_addr four copy_start_addr
+
+3 condition_1
+
+less_equal_operation_true:1 const_addr less_equal_next_value3 copy_start_addr
+
+
+3 condition_1
+
+
+add_sub_condition_true:1
+     add_condition_addr
+     one add_sub_next_addr1
+   
+   7 add_sub_next_addr1:0
+     add_sub_next_value1
+     
+   1 add_sub_next_addr1 one
+     add_sub_next_addr2
+   
+   7 add_sub_next_addr2:0
+     add_sub_next_value2
+ 
+   1 add_sub_next_addr2 one
+     add_sub_next_addr3
+   
+   7 add_sub_next_addr3:0
+     add_sub_next_value3
+   
+   1 add_sub_next_value1
+     const_addr add_sub_value1
+   1 add_sub_next_value2
+     const_addr add_sub_value2
+   1 add_sub_next_value3
+     const_addr add_sub_value3
+   
+7  copy_start_addr 
+   add_sub_ori_addr 
+
+   4 add_sub_ori_addr:0
+     two change_operation
+
+   3 add_sub_operation
+   
+change_operation:7 two
+      add_sub_operation
+
+add_sub_operation:1
+      add_sub_value1:0
+      add_sub_value2:0
+      add_sub_value3:0
+
+ 7 one add_sub_operation
+
+   1  copy_start_addr four
+      copy_start_addr
+
+   3 condition_1
+
+
+jump_condition_true:1
+    jump_condition_addr one
+    jump_next_addr
+
+   7 jump_next_addr:0
+     jump_next_value
+   
+   1 const_addr
+     jump_next_value
+     copy_start_addr
+
+   3 condition_1
+
+copy_condition_true:1
+     copy_condition_addr one
+     copy_next_addr1
+
+   7 copy_next_addr1:0
+     copy_next_value1
+
+  1 copy_next_addr1 one
+    copy_next_addr2
+
+  7 copy_next_addr2:0
+    copy_next_value2
+
+  1 const_addr copy_next_value1
+    copy_value1
+
+  1 const_addr copy_next_value2
+    copy_value2
+
+  7 copy_value1:0 copy_value2:0
+
+  1 copy_start_addr three
+    copy_start_addr
+
+  3 condition_1
+
+put_condition_true:1 put_condition_addr one put_next_addr1
+
+   7 put_next_addr1:0
+     put_next_value1
+
+   1 put_next_addr1 one
+     put_next_addr2
+ 
+   7 put_next_addr2:0
+     put_next_value2
+
+   1 put_next_value2 const_addr
+     put_value
+     
+ 
+
+   7 put_next_value1
+     put_value:0
+ 
+   1 copy_start_addr three
+     copy_start_addr
+
+   3 condition_1
+   
+   
+
+   
+
+stop:9
+
+const_addr:0
+
+jump_next_value:0
+
+add_sub_next_value1:0
+add_sub_next_value2:0
+add_sub_next_value3:0
+
+less_equal_next_value1:0
+less_equal_next_value2:0
+less_equal_next_value3:0
+less_equal_value3:0
+
+copy_next_value1:0
+copy_next_value2:0
+copy_start_addr:0
+
+put_next_value1:0
+put_next_value2:0
+put_value1:0
+
+solution:3 6 2 4 0 
+3 11 
+1 0 0 
+4 4 9 55
+7 3 10 
+5 8 4 26
+7 10 5
+9 
+5 9 3 45
+7 5 10
+7 60 5
+1 8 36 8
+7 60 9
+3 18
+1 5 10 5
+1 9 49 9
+3 26
+1 5 55 5
+9 
+0
