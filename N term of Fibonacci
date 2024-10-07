@@ -1,0 +1,22 @@
+3 start first_element_location:60
+length:5
+start:7 first_element_location first_addr 
+1 first_element_location length end_addr
+
+check:5 first_addr end_addr 17
+9
+1 num1 num2 num3
+
+7 first_addr first_value
+7 num1 first_value:0
+7 num2 num1
+7 num3 num2
+1 first_addr one first_addr
+3 check
+
+one:1
+num1:0
+num2:1
+num3:0
+end_addr:0
+first_addr:0
