@@ -1,0 +1,27 @@
+3 start:5 input:37 result:0
+5 input counter1 28
+
+5 counter2 counter1 29
+4 result2 input 39
+5 result2 input 43
+2 counter1 one counter1
+7 counter1 result 
+9
+
+1 result2 counter1 result2
+1 counter2 one counter2
+3 9
+
+7 counter1 result 
+9
+
+1 counter1 one counter1 
+7 zero counter2
+7 zero result2
+3 9 
+
+counter1:1 
+counter2:2
+one:1
+zero:0
+result2:0
