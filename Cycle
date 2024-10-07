@@ -1,0 +1,39 @@
+3 start seq_location:54
+seq_length:3 cycle_location:78
+cycle_length:8
+
+start:7 seq_location num1_addr
+
+7 cycle_location cycle_first_el_addr
+
+check1:5 counter1  cycle_length check2
+stop:9
+
+check2:5 counter2 seq_length check2True
+
+
+7 zero counter2
+7 seq_location num1_addr
+
+check2True:7 num1_addr:0 cycle_first_el_addr:0
+
+1 counter2 one counter2
+
+1 num1_addr one num1_addr 
+
+1 cycle_first_el_addr one cycle_first_el_addr
+
+1 counter1 one counter1 
+
+3 check1 
+
+num1_value:0
+counter1:0
+counter2:0
+one:1
+zero:0
+1
+2
+3
+4
+5
