@@ -1,0 +1,53 @@
+3 start first_element_location:58
+length:5
+result:1
+start:5 length two change_result
+
+7 first_element_location start_addr 
+
+
+2 length one help_var
+1 start_addr help_var end_addr
+
+
+check1:5 start_addr end_addr 
+change_value
+
+3 change_result
+
+
+change_value:7 start_addr:0 value1 
+
+7 end_addr:0 value2
+
+isequal:4 value1 value2 isequalTrue 
+stop:9
+isequalTrue:1 start_addr one start_addr
+2 end_addr one end_addr
+3 check1
+
+
+
+
+
+change_result:7 two result
+3 stop
+
+
+
+
+
+
+
+one:1
+two:2
+help_var:0
+value1:0
+value2:0
+100
+200
+300
+200
+100
+
+
