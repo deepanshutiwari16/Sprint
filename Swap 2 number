@@ -1,0 +1,26 @@
+3 start first_element_addr:30
+length:2
+ 
+start:7 first_element_addr value1_addr 
+7 value1_addr:0 value1
+
+1 first_element_addr one value2_addr 
+7 value1_addr temp1 
+
+7 value2_addr:0 temp1:0 
+
+7 value2_addr temp2 
+7 value1 temp2:0
+
+9
+
+
+
+
+
+
+value1:0
+one:1
+23 67
+
+ 
