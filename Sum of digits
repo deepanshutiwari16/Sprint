@@ -1,0 +1,27 @@
+3 start number:105 result:0
+start:7 number remainder 
+
+check1:5 number  ten check1True
+
+check2:5 remainder ten check2True
+2 remainder ten remainder 
+1 quetient one quetient
+3 check1 
+
+check2True:1 result remainder result
+7 quetient remainder 
+
+4 quetient zero check3True
+7 zero quetient 
+3 check1
+
+check1True:7 number result
+9
+
+check3True:9
+
+remainder:0
+quetient:0
+one:1
+zero:0
+ten:10
